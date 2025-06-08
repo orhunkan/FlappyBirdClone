@@ -6,7 +6,14 @@ public class Bird : MonoBehaviour
     private Rigidbody rb;
     private bool isDead = false;
 
+    [SerializeField]
+    private AudioSource _source;
+
     public AudioClip wingClip, hitClip;
+
+    public float tiltSmooth = 5f;       
+    public float maxRotation = 30f;     
+    public float minRotation = -90f;   
 
     private void Start()
     {
@@ -24,17 +31,27 @@ public class Bird : MonoBehaviour
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
 #endif
         {
-            rb.velocity = Vector2.up * jumpForce;
-            AudioSource.PlayClipAtPoint(wingClip, Camera.main.transform.position);
+            rb.velocity = Vector3.up * jumpForce;
+            _source.PlayOneShot(wingClip);
         }
+
+        RotateBird();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void RotateBird()
     {
-        if (isDead) return;
+        float angle = Mathf.Clamp(rb.velocity.y * 5f, minRotation, maxRotation);
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, angle), tiltSmooth * Time.deltaTime);
+    }
 
-        isDead = true;
-        AudioSource.PlayClipAtPoint(hitClip, Camera.main.transform.position);
-        GameManager.Instance.GameOver();
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Pipe") || other.CompareTag("Base"))
+        {
+            if (isDead) return;
+            isDead = true;
+            _source.PlayOneShot(hitClip);
+            GameManager.Instance.GameOver();
+        }
     }
 }

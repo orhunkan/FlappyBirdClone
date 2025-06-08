@@ -1,0 +1,19 @@
+<libraries>
+  <library
+      name="/Users/macbookpro/My project/FlappyBirdClone/FlappyBirdClone/Library/Bee/Android/Prj/Mono2x/Gradle@@:unityLibrary::release"
+      jars="/Users/macbookpro/My project/FlappyBirdClone/FlappyBirdClone/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/build/.transforms/c2506413676fc5d734cd0b60c2972e7c/transformed/out/jars/classes.jar:/Users/macbookpro/My project/FlappyBirdClone/FlappyBirdClone/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/build/.transforms/c2506413676fc5d734cd0b60c2972e7c/transformed/out/jars/libs/R.jar:/Users/macbookpro/My project/FlappyBirdClone/FlappyBirdClone/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/build/.transforms/c2506413676fc5d734cd0b60c2972e7c/transformed/out/jars/libs/unity-classes.jar"
+      resolved="Gradle:unityLibrary:unspecified"
+      folder="/Users/macbookpro/My project/FlappyBirdClone/FlappyBirdClone/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/build/.transforms/c2506413676fc5d734cd0b60c2972e7c/transformed/out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="__local_aars__:/Users/macbookpro/My project/FlappyBirdClone/FlappyBirdClone/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/libs/unity-classes.jar:unspecified@jar"
+      jars="/Users/macbookpro/My project/FlappyBirdClone/FlappyBirdClone/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/libs/unity-classes.jar"
+      resolved="__local_aars__:/Users/macbookpro/My project/FlappyBirdClone/FlappyBirdClone/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/libs/unity-classes.jar:unspecified"/>
+</libraries>

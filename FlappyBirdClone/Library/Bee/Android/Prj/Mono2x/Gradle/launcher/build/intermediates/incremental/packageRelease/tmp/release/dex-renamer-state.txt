@@ -1,0 +1,4 @@
+#Sun Jun 08 22:43:20 TRT 2025
+base.0=/Users/macbookpro/My project/FlappyBirdClone/FlappyBirdClone/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/build/intermediates/dex/release/mergeDexRelease/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

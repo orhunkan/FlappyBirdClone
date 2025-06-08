@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class ScoreTrigger : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerExit(Collider collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Bird"))
         {
             GameManager.Instance.AddScore();
         }
